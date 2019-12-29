@@ -25,7 +25,7 @@ class App extends Component{
         <header>
           <h1>Todo App</h1>
         </header>
-        <TodoForm addTodo={this.addTodo}/>
+        {this.state.todos.length < 4 ? <TodoForm addTodo={this.addTodo}/> : null}
         <TodoList todos={this.state.todos}/>
       </div>
     );
